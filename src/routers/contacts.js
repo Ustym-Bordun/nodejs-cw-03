@@ -20,18 +20,18 @@ router.get('/contacts', ctrlWrapper(getContactsController));
 
 router.get('/contacts/:contactId', ctrlWrapper(getContactByIdController));
 
-router.delete('contacts/:contactId', ctrlWrapper(deleteContactController));
+router.delete('/contacts/:contactId', ctrlWrapper(deleteContactController));
 
 router.post('/contacts', jsonParser, ctrlWrapper(createContactController));
 
 router.put(
-  'contacts/:contactId',
+  '/contacts/:contactId',
   jsonParser,
   ctrlWrapper(upsertContactController),
 );
 
 router.patch(
-  'contacts/:contactId',
+  '/contacts/:contactId',
   jsonParser,
   ctrlWrapper(patchContactController),
 );
